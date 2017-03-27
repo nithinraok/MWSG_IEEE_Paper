@@ -9,6 +9,7 @@ function [MWSG]=compute_MWSG_Spec(signal,fs,M,P)
 % fs is the sampling frequency
 % M is the Matrix Length required for SG Coefficients
 % P is the Order for SG Coefficients
+% MWSG is the Multiple Window Savitzky Golay(SG) Filterd Spectrogram
 %%
 switch nargin
     case 1
