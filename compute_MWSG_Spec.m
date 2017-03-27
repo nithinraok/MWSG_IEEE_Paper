@@ -1,9 +1,14 @@
 function [MWSG]=compute_MWSG_Spec(signal,fs,M,P)
 %%
-% Function to calculate Multiple Window Savitzky Golay Filter of
+% Function to calculate Multiple Window Savitzky Golay(SG) Filter of
 % Matrix Length M and Order P default M=21 P=3
 % High Pass filtered at 1Khz. DSP System ToolBox of MatLab is required
 % to run this program
+% Where
+% signal is the audio file 
+% fs is the sampling frequency
+% M is the Matrix Length required for SG Coefficients
+% P is the Order for SG Coefficients
 %%
 switch nargin
     case 1

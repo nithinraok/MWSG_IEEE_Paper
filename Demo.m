@@ -15,16 +15,16 @@ MWSG=compute_MWSG_Spec(signal,fs,M,P);
 % Calculate the directional spectrograms based on MWSG Spectrogram
 % Parameters
 len=11; % No of array values to be summed up in the required direction
-[D0,D45,D90,D135,DAll]=compute_Dir_Spec_From_MWSG(MWSG,len);
+[x_D1,x_D2,x_D3,x_D4,DAll]=compute_Dir_Spec_From_MWSG(MWSG,len);
 %% Step 3 Segmentation
 % Calculating Predicted frames for each directed spectrogam
-Pdframes0=segment(D0); % Predicted frames at 0 degress directed spectrogram
-Pdframes45=segment(D45); % Predicted frames at 0 degress directed spectrogram
-Pdframes90=segment(D90); % Predicted frames at 0 degress directed spectrogram
-Pdframes135=segment(D135); % Predicted frames at 0 degress directed spectrogram
-% Final Predicted frames = max(each directional predicted frame)
-Pdframes= (Pdframes0+Pdframes90+Pdframes45+Pdframes135);
-Pdframes(Pdframes>0)=1;
+d1=segment(x_D1); % Predicted frames at 0 degress directed spectrogram
+d2=segment(x_D2); % Predicted frames at 0 degress directed spectrogram
+d3=segment(x_D3); % Predicted frames at 0 degress directed spectrogram
+d4=segment(x_D4); % Predicted frames at 0 degress directed spectrogram
+% Final Predicted frames(d) = max(each directional predicted frame)
+d= (d1+d3+d2+d4);
+d(d>0)=1;
 
 %% Figures
 % Just to get Frequency and Time Points
@@ -48,7 +48,7 @@ ylabel('Frequency in Hz');
 subplot(3,1,3);
 plot(T,GroundTruth,'r'); % GroundTruth Frames
 hold on;
-plot(T,Pdframes,'b');   % Predicted Frames
+plot(T,d,'b');   % Predicted Frames
 hold off;
 ylim([0 2]);
 xlabel('Time in sec');
