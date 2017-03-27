@@ -40,8 +40,8 @@ d is the Predicted frame array
 
 
 # Demo.m 
- % This file is included to demonstrate the steps of algorithm we used to
-% detect Bird sounds using Multiple Window Savitzky-Golay(MWSG) Filter
+ This file is included to demonstrate the steps of algorithm we used to
+ detect Bird sounds using Multiple Window Savitzky-Golay(MWSG) Filter
 
 # GroundTruth.txt
  This file contains the ground truth of the audio file 'PC5_20090606_050000_0010' which is taken from
