@@ -1,12 +1,12 @@
 function [d]=segment(Spect)
 %% 
-% Function to generate segmented vector(PdframesC) based on the threshold on Input
+% Generate segmented vector(PdframesC) based on the threshold on Input
 % Spectrogram (Spect)
 % Refrence Paper : Bird acoustic activity detection based on morphological filtering
 % of the spectrogram
 % Where
-% Spect is the Spectrogram
-% d is the Predicted frame array
+% Spect : Spectrogram
+% d : Predicted frame array
 
 d=zeros(1,size(Spect,2));
 W=sum(Spect);

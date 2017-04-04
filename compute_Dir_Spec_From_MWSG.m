@@ -1,17 +1,17 @@
 function [x_D1,x_D2,x_D3,x_D4,DAll]=compute_Dir_Spec_From_MWSG(Spect,len)
 
 %% 
-% Program to calculate four directional spectrogram and summed up
+% Calculate four directional spectrogram and summed up
 % directional spectrogram calculated on a mentioned patch of len
 % Where 
-% Spect is the spectrogram 
-% x_D1 is the spectrogram which is replaced by values in the patch of
+% Spect : spectrogram 
+% x_D1 : spectrogram which is replaced by values in the patch of
 % length len at angle 0 degrees
-% x_D2 is the spectrogram which is replaced by values in the patch of
+% x_D2 : spectrogram which is replaced by values in the patch of
 % length len at angle 45 degrees
-% x_D3 is the spectrogram which is replaced by values in the patch of
+% x_D3 : spectrogram which is replaced by values in the patch of
 % length len at angle 90 degrees
-% x_D4 is the spectrogram which is replaced by values in the patch of
+% x_D4 : spectrogram which is replaced by values in the patch of
 % length len at angle 135 degrees
 
 M=Spect;

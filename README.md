@@ -1,5 +1,7 @@
 # MWSG_IEEE_Paper
 Codes for paper "Spectrogram enhancement using multiple window Savitzky Golay (MWSG) filter for robust bird sound detection" which is published in IEEE Transactions on Speech,Audio and Language Processing March 2017
+IEEE Xplorer Link :
+MatLab Version used : R2014a.
 
 ![Image](https://raw.githubusercontent.com/nithinraok/MWSG_IEEE_Paper/master/DemoFigure.jpg)
 Description of each MatLab file present in the folder is described below:
@@ -7,7 +9,7 @@ Description of each MatLab file present in the folder is described below:
 # compute_MWSG_Spec.m
  Function to calculate Multiple Window Savitzky Golay(SG) Filter of
 Matrix Length M and Order P default M=21 P=3
-High Pass filtered at 1Khz. DSP System ToolBox of MatLab is required
+High Pass filtered at 1KHz. DSP System ToolBox of MatLab is required
 to run this program
 Where
 signal is the audio file 
@@ -33,7 +35,7 @@ length len at angle 135 degrees
 # segment.m
  Function to generate segmented vector(PdframesC) based on the threshold on Input
 Spectrogram (Spect)
-Refrence Paper : Bird acoustic activity detection based on morphological filtering
+Reference Paper : Bird acoustic activity detection based on morphological filtering
 of the spectrogram
 Where
 Spect is the Spectrogram
@@ -46,4 +48,6 @@ d is the Predicted frame array
 
 # GroundTruth.txt
  This file contains the ground truth of the audio file 'PC5_20090606_050000_0010' which is taken from
- MLSP dataset and is used to demonstrate our algorithm
+ MLSP dataset and is used to demonstrate our algorithm.
+ Ground truth is frame wise 0s and 1s
+

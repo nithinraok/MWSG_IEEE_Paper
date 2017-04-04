@@ -1,15 +1,15 @@
 function [MWSG]=compute_MWSG_Spec(signal,fs,M,P)
 %%
-% Function to calculate Multiple Window Savitzky Golay(SG) Filter of
+% calculate Multiple Window Savitzky Golay(SG) Filter of
 % Matrix Length M and Order P default M=21 P=3
 % High Pass filtered at 1Khz. DSP System ToolBox of MatLab is required
 % to run this program
 % Where
-% signal is the audio file 
-% fs is the sampling frequency
-% M is the Matrix Length required for SG Coefficients
-% P is the Order for SG Coefficients
-% MWSG is the Multiple Window Savitzky Golay(SG) Filterd Spectrogram
+% signal : I/P audio file 
+% fs : Sampling frequency
+% M : Matrix Length required for SG Coefficients
+% P : Order for SG Coefficients
+% MWSG : Multiple Window Savitzky Golay(SG) Filtered Spectrogram
 %%
 switch nargin
     case 1
@@ -25,7 +25,7 @@ end
 %%
 % Calculate Savitzky Golay Coefficients of MatrixLength M and Order P
 [~,~,~,~,sgCoeff]=SavGolCoeff(P,M);
-%% Parametrs for High Pass filtering
+%% Parameters for High Pass filtering
 passBandFreq=(1000)/(fs/2);
 stopBandFreq=(900)/(fs/2);
 passBandAttn=1; %dB
@@ -102,7 +102,7 @@ end
 
 function out_spec = multiWindow(signal,fs)
 %%
-% Function to generate spectrogram usig mutiple window length method
+% Function to generate spectrogram using multiple window length method
 % FFT size =512;
 winlength=[32 64 128 256 512];
 shift=256;
