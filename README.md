@@ -1,45 +1,48 @@
 # MWSG_IEEE_Paper
 Codes for paper "Spectrogram enhancement using multiple window Savitzky Golay (MWSG) filter for robust bird sound detection" which is published in IEEE Transactions on Speech,Audio and Language Processing March 2017
-<br />IEEE Xplorer Link : (To be included Soon)
+<br />IEEE Xplorer Link : (To be included soon)
 <br />MatLab Version used : R2014a.
 
 ![Image](https://raw.githubusercontent.com/nithinraok/MWSG_IEEE_Paper/master/DemoFigure.jpg)
 Description of each MatLab file present in the folder is described below:
 
 # compute_MWSG_Spec.m
- Function to calculate Multiple Window Savitzky Golay(SG) Filter of
+calculate Multiple Window Savitzky Golay(SG) Filter of
 Matrix Length M and Order P default M=21 P=3
-High Pass filtered at 1KHz. DSP System ToolBox of MatLab is required
+High Pass filtered at 1Khz. DSP System ToolBox of MatLab is required
 to run this program
 Where
-signal is the audio file 
-fs is the sampling frequency
-M is the Matrix Length required for SG Coefficients
-P is the Order for SG Coefficients
+signal : I/P audio file 
+fs : Sampling frequency
+M : Matrix Length required for SG Coefficients
+P : Order for SG Coefficients
+MWSG : Multiple Window Savitzky Golay(SG) Filtered Spectrogram
 
 
 # compute_Dir_Spec_From_MWSG.m
- Program to calculate four directional spectrogram and summed up
+Calculate four directional spectrogram and summed up
 directional spectrogram calculated on a mentioned patch of len
 Where 
-Spect is the spectrogram 
-x_D1 is the spectrogram which is replaced by values in the patch of
+Spect : spectrogram 
+x_D1 : spectrogram which is replaced by values in the patch of
 length len at angle 0 degrees
-x_D2 is the spectrogram which is replaced by values in the patch of
+x_D2 : spectrogram which is replaced by values in the patch of
 length len at angle 45 degrees
-x_D3 is the spectrogram which is replaced by values in the patch of
+x_D3 : spectrogram which is replaced by values in the patch of
 length len at angle 90 degrees
-x_D4 is the spectrogram which is replaced by values in the patch of
+x_D4 : spectrogram which is replaced by values in the patch of
 length len at angle 135 degrees
 
+
 # segment.m
- Function to generate segmented vector(PdframesC) based on the threshold on Input
+Generate segmented vector(PdframesC) based on the threshold on Input
 Spectrogram (Spect)
-Reference Paper : Bird acoustic activity detection based on morphological filtering
+Refrence Paper : Bird acoustic activity detection based on morphological filtering
 of the spectrogram
 Where
-Spect is the Spectrogram
-d is the Predicted frame array
+Spect : Spectrogram
+d : Predicted frame array
+
 
 
 # Demo.m 
