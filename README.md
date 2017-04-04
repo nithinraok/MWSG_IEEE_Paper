@@ -12,7 +12,7 @@ Matrix Length M and Order P default M=21 P=3
 High Pass filtered at 1Khz. 
 <br />DSP System ToolBox of MatLab is required
 to run this program
-<br />Where
+<br />Parameters
 <br />signal : I/P audio file 
 <br />fs : Sampling frequency
 <br />M : Matrix Length required for SG Coefficients
@@ -23,7 +23,7 @@ to run this program
 # compute_Dir_Spec_From_MWSG.m
 Calculate four directional spectrogram and summed up
 directional spectrogram calculated on a mentioned patch of len
-<br />Where 
+<br />Parameters 
 <br />Spect : spectrogram 
 <br />x_D1 : spectrogram which is replaced by values in the patch of
 length len at angle 0 degrees
@@ -40,7 +40,7 @@ Generate segmented vector(PdframesC) based on the threshold on Input
 Spectrogram (Spect)
 <br />Refrence Paper : Bird acoustic activity detection based on morphological filtering
 of the spectrogram
-<br />Where
+<br />Parameters
 <br />Spect : Spectrogram
 <br />d : Predicted frame array
 
