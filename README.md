@@ -1,6 +1,6 @@
 # MWSG_IEEE_Paper
 Codes for paper "Spectrogram enhancement using multiple window Savitzky Golay (MWSG) filter for robust bird sound detection" which is published in IEEE Transactions on Speech,Audio and Language Processing March 2017
-<br />IEEE Xplorer Link : (To be included soon)
+<br />IEEE Xplorer [Link](http://ieeexplore.ieee.org/document/7933047/)
 <br />MatLab Version used : R2014a.
 
 ![Image](https://raw.githubusercontent.com/nithinraok/MWSG_IEEE_Paper/master/DemoFigure.jpg)
